@@ -2,18 +2,16 @@ package com.ismail.mynotesapp.adapter
 
 import android.app.Activity
 import android.content.Intent
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.recyclerview.widget.RecyclerView
 import com.ismail.mynotesapp.CustomOnItemClickListener
 import com.ismail.mynotesapp.NoteAddUpdateActivity
 import com.ismail.mynotesapp.R
 import com.ismail.mynotesapp.entity.Note
 import kotlinx.android.synthetic.main.item_note.view.*
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by sidiqpermana on 11/23/16.
@@ -29,22 +27,6 @@ class NoteAdapter(private val activity: Activity) : RecyclerView.Adapter<NoteAda
 
             notifyDataSetChanged()
         }
-
-    fun addItem(note: Note) {
-        this.listNotes.add(note)
-        notifyItemInserted(this.listNotes.size - 1)
-    }
-
-    fun updateItem(position: Int, note: Note) {
-        this.listNotes[position] = note
-        notifyItemChanged(position, note)
-    }
-
-    fun removeItem(position: Int) {
-        this.listNotes.removeAt(position)
-        notifyItemRemoved(position)
-        notifyItemRangeChanged(position, this.listNotes.size)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)

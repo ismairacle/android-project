@@ -3,8 +3,6 @@ package com.ismail.mynotesapp.db
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.provider.BaseColumns
-
 import com.ismail.mynotesapp.db.DatabaseContract.NoteColumns
 import com.ismail.mynotesapp.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 

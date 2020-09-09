@@ -28,22 +28,6 @@ class NoteAdapter(private val activity: Activity) : RecyclerView.Adapter<NoteAda
             notifyDataSetChanged()
         }
 
-    fun addItem(note: Note) {
-        this.listNotes.add(note)
-        notifyItemInserted(this.listNotes.size - 1)
-    }
-
-    fun updateItem(position: Int, note: Note) {
-        this.listNotes[position] = note
-        notifyItemChanged(position, note)
-    }
-
-    fun removeItem(position: Int) {
-        this.listNotes.removeAt(position)
-        notifyItemRemoved(position)
-        notifyItemRangeChanged(position, this.listNotes.size)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
         return NoteViewHolder(view)
