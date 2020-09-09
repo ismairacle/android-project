@@ -20,7 +20,7 @@ internal class DatabaseContract {
             const val DESCRIPTION = "description"
             const val DATE = "date"
 
-            const val AUTHORITY = "com.ismail.consumerapp"
+            const val AUTHORITY = "com.ismail.mynotesapp"
             const val SCHEME = "content"
 
             // untuk membuat URI content://com.ismail.consumerapp/note
