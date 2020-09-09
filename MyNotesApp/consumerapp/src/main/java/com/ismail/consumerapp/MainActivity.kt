@@ -1,4 +1,4 @@
-package com.ismail.mynotesapp
+package com.ismail.consumerapp
 
 import android.content.Intent
 import android.database.ContentObserver
@@ -9,10 +9,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import com.ismail.mynotesapp.adapter.NoteAdapter
-import com.ismail.mynotesapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.ismail.mynotesapp.entity.Note
-import com.ismail.mynotesapp.helper.MappingHelper
+import com.ismail.consumerapp.adapter.NoteAdapter
+import com.ismail.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.ismail.consumerapp.entity.Note
+import com.ismail.consumerapp.helper.MappingHelper
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.title = "Notes"
+        supportActionBar?.title = "Consumer App"
 
         rv_notes.layoutManager = LinearLayoutManager(this)
         rv_notes.setHasFixedSize(true)
